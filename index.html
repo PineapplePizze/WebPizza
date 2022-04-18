@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web bán FastFood_demo</title>
+
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper@7/swiper-bundle.min.css"
+    />
+
+    <!-- font awesome link  -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+
+    <!-- css file link  -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <!-- than bai -->
+  <body>
+    <!-- header đầu trang-->
+    <header class="header">
+      <a href="#" class="logo"><i class="fas fa-store"></i> Winie </a>
+
+      <nav class="navbar">
+        <a class="active" href="#home">Trang Chủ</a>
+        <a href="#monngon">Đồ Ăn</a>
+        <a href="#about">Về chúng tôi</a>
+        <a href="#menu">Thực Đơn</a>
+        <a href="#order">Đặt Hàng</a>
+      </nav>
+
+      <div class="icons">
+        <i class="fas fa-bars" id="menu-bars"></i>
+        <i class="fas fa-search" id="search-btn"></i>
+        <a href="#" class="fas fa-heart"></a>
+      </div>
+
+       <!-- The Modal -->
+       <button id="cart">
+        <a href="#" class="fa fa-shopping-basket" aria-hidden="true"></a>
+    </button>
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Giỏ Hàng</h5>
+                <span class="close">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div class="cart-row">
+                    <span class="cart-item cart-header cart-column">Sản Phẩm</span>
+                    <span class="cart-price cart-header cart-column">Giá</span>
+                    <span class="cart-quantity cart-header cart-column">Số Lượng</span>
+                </div>
+                <div class="cart-items">
+
+                </div>
+                <div class="cart-total">
+                    <strong class="cart-total-title">Tổng Cộng:</strong>
+                    <span class="cart-total-price">0VNĐ</span>
+                </div>
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary close-footer">Đóng</button>
+                <button type="button" class="btn btn-primary order">Thanh Toán</button>
+            </div>
+        </div>
+
+      <div class="search-form">
+        <input type="search" id="search-box" placeholder="search here..." />
+        <label for="search-box" class="fas fa-search"></label>
+      </div>
+    </header>
+
+    <!-- home page starts -->
+
+    <section class="home" id="home">
+      <div class=" swiper-container home-slider">
+        <div class="swiper-wrapper wrapper">
+          <div class="swiper-slide slider">
+            <div class="content">
+              <span> Món đặc biệt ngày trong tuần nay </span>
+              <h3>Mì Spaghetti kiểu Pháp - Tây</h3>
+              <p>
+                Được thưởng thức một bữa ăn đậm chất Âu tại nhà hàng Winie của chúng tôi, với hương vị phục vụ 
+                đậm chất chuẩn của một nhà hàng 4 sao. Đây là món Spaghetti được đầu bếp chúng tôi chế biến để phục vụ những vị khách
+                khó tính nhất, để hợp mùi vị với khách hàng nói chung
+              </p>
+              <a href="#" class="btn"> order now </a>
+            </div>
+            <div class="images">
+              <img src="images/home-img-1.png" alt="" />
+            </div>
+          </div>
+
+          <div class="swiper-slide slider">
+            <div class="content">
+              <span>  Món đặc biệt ngày trong tuần nay </span>
+              <h3> Gà Nướng vị 5 miền </h3>
+              <p>
+                Được thưởng thức một bữa ăn đậm chất Âu tại nhà hàng Winie của chúng tôi, với hương vị phục vụ 
+                đậm chất chuẩn của một nhà hàng 4 sao. Món Gà quay với gia vị đủ mọi miền chỉ tại Vietnam
+              </p>
+              <a href="#" class="btn"> order now </a>
+            </div>
+            <div class="images">
+              <img src="images/home-img-2.png" alt="" />
+            </div>
+          </div>
+
+          <div class=" swiper-slide slider">
+            <div class="content">
+              <span>  Món đặc biệt ngày trong tuần nay </span>
+              <h3>Pizza với Olive trái</h3>
+              <p>
+                Được thưởng thức một bữa ăn đậm chất Âu tại nhà hàng Winie của chúng tôi, với hương vị phục vụ 
+                đậm chất chuẩn của một nhà hàng 4 sao. Thực đơn tuần này với Pizza Olive được tự tay làm từ đầu bếp Âu riêng chỉ có tại Vietnam
+              </p>
+              <a href="#" class="btn"> order now </a>
+            </div>
+            <div class="images">
+              <img src="images/home-img-3.png" alt="" />
+            </div>
+          </div>
+        </div>
+        
+        <div class="swiper-pagination">
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- home page ends -->
+
+
+
+
+    <!--sanpham section starts-->
+
+    <section class="monngon" id="monngon">
+
+        <h3 class="sub-heading"> Đồ Ăn </h3>
+        <h1 class="heading"> Các món ăn phổ biến </h1>
+    
+        <div class="box-container">
+    
+            <div class="box">
+                <a href="#" class="fas fa-heart"></a>
+                <a href="#" class="fas fa-eye"></a>
+                <img src="images/dish-1.png" alt="">
+                <h3>Hambergur</h3>
+                <span class="price">33.000VNĐ</span>
+                <a href="#" class="btn">Thêm vào giỏ</a>
+            </div>
+    
+            <div class="box">
+                <a href="#" class="fas fa-heart"></a>
+                <a href="#" class="fas fa-eye"></a>
+                <img src="images/dish-2.png" alt="">
+                <h3>Nuggets Gà</h3>
+                <span class="price">35.000VNĐ</span>
+                <a href="#" class="btn">Thêm vào giỏ</a>
+            </div>
+    
+            <div class="box">
+                <a href="#" class="fas fa-heart"></a>
+                <a href="#" class="fas fa-eye"></a>
+                <img src="images/dish-3.png" alt="">
+                <h3>Gà nướng ChanhXả</h3>
+                <span class="price">220.000VNĐ</span>
+                <a href="#" class="btn">Thêm vào giỏ</a>
+            </div>
+    
+            <div class="box">
+                <a href="#" class="fas fa-heart"></a>
+                <a href="#" class="fas fa-eye"></a>
+                <img src="images/dish-4.png" alt="">
+                <h3>Pizza thập cẩm</h3>
+                <span class="price">150.000VNĐ</span>
+                <a href="#" class="btn">Thêm vào giỏ</a>
+            </div>
+    
+            <div class="box">
+                <a href="#" class="fas fa-heart"></a>
+                <a href="#" class="fas fa-eye"></a>
+                <img src="images/dish-5.png" alt="">
+                <h3>Bánh Mì phết Socola</h3>
+                <span class="price">55.000VNĐ</span>
+                <a href="#" class="btn">Thêm vào giỏ</a>
+            </div>
+    
+            <div class="box">
+                <a href="#" class="fas fa-heart"></a>
+                <a href="#" class="fas fa-eye"></a>
+                <img src="images/dish-6.png" alt="">
+                <h3>Đùi gà chiên</h3>
+                <span class="price">27.000VNĐ/Miếng</span>
+                <a href="#" class="btn">Thêm vào giỏ</a>
+            </div>
+
+            <div class="box">
+                <a href="#" class="fas fa-heart"></a>
+                <a href="#" class="fas fa-eye"></a>
+                <img src="images/dish-6.png" alt="">
+                <h3> Gà xốt chua ngọt</h3>
+                <span class="price">27.000VNĐ/Miếng</span>
+                <a href="#" class="btn">Thêm vào giỏ</a>
+            </div>
+
+            <div class="box">
+                <a href="#" class="fas fa-heart"></a>
+                <a href="#" class="fas fa-eye"></a>
+                <img src="images/dish-6.png" alt="">
+                <h3>Đùi gà nướng</h3>
+                <span class="price">27.000VNĐ/Miếng</span>
+                <a href="#" class="btn">Thêm vào giỏ</a>
+            </div>
+    
+        </div>
+    
+    </section>
+
+     <!-- about section starts  -->
+
+<section class="about" id="about">
+
+  <h3 class="sub-heading"> Về chúng tôi </h3>
+  <h1 class="heading"> Tại sao chọn chúng tôi </h1>
+
+  <div class="row">
+
+      <div class="image">
+          <img src="images/about-img.png" alt="">
+      </div>
+
+      <div class="content">
+          <h3>FastFood ngon nhất SaiGon</h3>
+          <p>
+            Winie là chuỗi nhà hàng được thành lập bởi những năm 2010 chúng tôi khởi nghiệp chỉ với vỏn vẹn 2 nhà hàng 
+            được phân bố tại thành phố Hồ Chí Minh, ngay tại Quận 1. Và sau 10 năm khởi nghiệp giờ đây chúng tôi đã thành công và mở
+            ra thêm 10 chuỗi nhà hàng được phân bố khắp Việtnam từ Bắc vào SàiGòn.
+          </p>
+          <p>Chưa kể đến chị Dương người đã truyền động lực cho chúng tôi để có thể bước tiếp trên sự thành công này, chị là người đã từng nấu ăn
+            cho tôi lúc bé, dạy tôi cách nấu một món ăn chuẩn Á-Âu như nhà hàng hiện nay. Với những món ăn quý khách ăn và cảm thấy hài lòng thì điều đó
+            là niềm vui của tôi và chị Dương. Cám ơn quý khách đã tin và ủng hộ nhà hàng Winie chúng tôi.
+            Hiện tại quán lập trang web và có thể order thức ăn tại nhà.
+          </p>
+          <div class="icons-container">
+              <div class="icons">
+                  <i class="fas fa-shipping-fast"></i>
+                  <span>van Chuyen Free</span>
+              </div>
+              <div class="icons">
+                  <i class="fas fa-dollar-sign"></i>
+                  <span>TraPhi de dang</span>
+              </div>
+              <div class="icons">
+                  <i class="fas fa-headset"></i>
+                  <span>Phucvu 24/7</span>
+              </div>
+          </div>
+          <a href="#" class="btn">Quay về trang đầu</a>
+      </div>
+
+  </div>
+
+</section>
+
+<!--about section ends-->
+
+<!-- menu section starts  -->
+
+<section class="menu" id="menu">
+
+  <h3 class="sub-heading">Thực đơn của chúng tôi </h3>
+  <h1 class="heading"> Món ăn đặc biệt hôm nay </h1>
+
+  <div class="box-container">
+
+      <div class="box">
+          <div class="image">
+              <img src="images/menu-1.jpg" alt="">
+              <a href="#" class="fas fa-heart"></a>
+          </div>
+          <div class="content">
+              <h3>Pizzaa thịt nguội</h3>
+              <p>Pizza được nấu ở nhiệt độ vừa phải cùng với thịt nguội được nướng chín thêm chút gia vị mặn mặn của sốt kem yonare</p>
+              <a href="#" class="btn">Thêm vào giỏ</a>
+          </div>
+      </div>
+
+      <div class="box">
+          <div class="image">
+              <img src="images/menu-2.jpg" alt="">
+              <a href="#" class="fas fa-heart"></a>
+          </div>
+          <div class="content">
+              <h3>Hambergur seasons</h3>
+              <p> Hambergur được những đầu bếp kinh nghiệm từ các cửa hàng ăn nhanh bên Tây-Âu hứa sẽ đem lại sự hài lòng cho người ăn nó</p>
+              <a href="#" class="btn">Thêm vào giỏ</a>
+          </div>
+      </div>
+
+      <div class="box">
+          <div class="image">
+              <img src="images/menu-3.jpg" alt="">
+              <a href="#" class="fas fa-heart"></a>
+          </div>
+          <div class="content">
+              <h3>Pancakees nướng</h3>
+              <p> Pancakes nướng là bữa ăn sáng được các bạn trẻ yêu thích, với sốt mật ong được tưới trên sẽ mang lại vị đậm cho bạn ăn</p>
+              <a href="#" class="btn">Thêm vào giỏ</a>
+          </div>
+      </div>
+
+      <div class="box">
+          <div class="image">
+              <img src="images/menu-4.jpg" alt="">
+              <a href="#" class="fas fa-heart"></a>
+          </div>
+          <div class="content">
+              <h3>BanhXukemPanCake</h3>
+              <p> Bánh Xu kem được làm theo kiểu pancakes mang thêm chút hương vị tây của buổi sáng
+                 với kem trộn socola đậm vị ngọt cho bạn thêm năng lượng sáng sớm</p>
+              <a href="#" class="btn">Thêm vào giỏ</a>
+          </div>
+      </div>
+
+      <div class="box">
+          <div class="image">
+              <img src="images/menu-5.jpg" alt="">
+              <a href="#" class="fas fa-heart"></a>
+          </div>
+          <div class="content">
+              <h3>Pancakess</h3>
+              <p> bữa ăn sáng cổ điển mang hương vị Tây - Âu</p>
+              <a href="#" class="btn">Thêm vào giỏ</a>
+          </div>
+      </div>
+
+      <div class="box">
+          <div class="image">
+              <img src="images/menu-6.jpg" alt="">
+              <a href="#" class="fas fa-heart"></a>
+          </div>
+          <div class="content">            
+              <h3>Sukem</h3>
+              <p>Bánh su kem một bữa phụ đáng để thưởng thức sau các bữa chính </p>
+              <a href="#" class="btn">Thêm vào giỏ</a>
+          </div>
+      </div>
+
+      <div class="box">
+          <div class="image">
+              <img src="images/menu-7.jpg" alt="">
+              <a href="#" class="fas fa-heart"></a>
+          </div>
+          <div class="content">
+              <h3>NuocUog</h3>
+              <p> Bên winie chúng tôi phục vụ mọi loại nước uống, để khiến khách hàng hài lòng</p>
+              <a href="#" class="btn">Thêm vào giỏ</a>
+          </div>
+      </div>
+
+      <div class="box">
+          <div class="image">
+              <img src="images/menu-8.jpg" alt="">
+              <a href="#" class="fas fa-heart"></a>
+          </div>
+          <div class="content">             
+              <h3>ThapCamHoaQua</h3>
+              <p> lại một bữa phụ cho các bữa chính, những hoa quả trái cây tươi khiến khách hàng phải thốt lên sao ngon quá</p>
+              <a href="#" class="btn">Thêm vào giỏ</a>
+          </div>
+      </div>
+
+  </div>
+
+</section>
+
+<!-- menu section ends -->
+
+<!-- order section starts  -->
+
+<section class="order" id="order">
+
+  <h3 class="sub-heading"> Đặt hàng ngay </h3>
+  <h1 class="heading"> Miễn phí và Nhanh </h1>
+
+  <form action="">
+
+      <div class="inputBox">
+          <div class="input">
+              <span>Tên bạn</span>
+              <input type="text" placeholder="Tên của bạn">
+          </div>
+          <div class="input">
+              <span>SĐT</span>
+              <input type="number" placeholder="Số điện thoại">
+          </div>
+      </div>
+      <div class="inputBox">
+          <div class="input">
+              <span>Gọi món</span>
+              <input type="text" placeholder="Tên món">
+          </div>
+          <div class="input">
+              <span>Món ăn truyền thống</span>
+              <input type="text" placeholder="Đặt thêm món">
+          </div>
+      </div>
+      <div class="inputBox">
+          <div class="input">
+              <span>Số Lượng</span>
+              <input type="number" placeholder="Bạn đặt bao nhiêu món">
+          </div>
+          <div class="input">
+              <span>Ngày và giờ</span>
+              <input type="datetime-local">
+          </div>
+      </div>
+      <div class="inputBox">
+          <div class="input">
+              <span>Địa chỉ</span>
+              <textarea name="" placeholder="Nhập địa chỉ của bạn" id="" cols="30" rows="10"></textarea>
+          </div>
+          <div class="input">
+              <span>Tin nhắn để lại</span>
+              <textarea name="" placeholder="Đểm lại lời nhắn" id="" cols="30" rows="10"></textarea>
+          </div>
+      </div>
+
+      <input type="submit" value="Đặt hàng ngay" class="btn">
+
+  </form>
+
+</section>
+
+<!-- order section ends -->
+
+<!-- footer section starts  -->
+
+<section class="footer">
+
+  <div class="box-container">
+
+      <div class="box">
+          <h3> Vị Trí cửa Hàng </h3>
+          <a href="#">Japan</a>
+          <a href="#">USA</a>
+          <a href="#">france</a>
+          <a href="#">German</a>
+      </div>
+
+
+      <div class="box">
+          <h3>contact info</h3>
+          <a href="#">+1234567890</a>
+          <a href="#">+1111111111</a>
+          <a href="#">801200067@stu.edu.vn</a>
+          <a href="#">801200067@stu.edu.vn</a>
+      </div>
+
+      <div class="box">
+          <h3>follow us</h3>
+          <a href="#">facebook</a>
+          <a href="#">twitter</a>
+          <a href="#">instagram</a>
+          <a href="#">linkedin</a>
+      </div>
+
+  </div>
+
+  <div class="credit"> Được làm vào 2021 by <span>mr. Tran </span> </div>
+
+</section>
+
+<!-- footer section ends -->
+
+
+
+
+
+
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <!-- custom js file link  -->
+    <script src="script.js"></script>
+  </body>
+</html>
